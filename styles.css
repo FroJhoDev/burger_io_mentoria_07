@@ -85,7 +85,12 @@ main h1 {
     font-size: 22px;
 }
 
+.item-card .card-content .iten-price .less-price {
+    font-size: 16px;
+}
+
 .iten-raiting {
+    display: flex;
     color: yellow;
     margin-bottom: 10px;
     font-size: 18px;
@@ -97,7 +102,7 @@ main h1 {
     justify-content: space-between;
 }
 
-.item-card .iten-option .option-detail{
+.option-detail{
     flex: 2;
     text-decoration: none;
     color: #333;
@@ -109,10 +114,104 @@ main h1 {
     font-weight: bold;
 }
 
-.item-card .iten-option .icon-option {
+.icon-option {
     background-color: rgba(255, 255, 255, 0.3);
     padding: 10px;
     border-radius: 100%;
     margin-left: 5px;
+    display: flex;
 }
 
+/* DETAILS PAGE */
+
+.header-details {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+}
+
+.header-details img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.header-details .option-details {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.header-details .option-details .right-option {
+    display: flex;
+}
+
+.header-details .option-details a {
+    text-decoration: none;
+}
+
+.header-details .icon-option {
+    color: black;
+    font-size: 18px;
+}
+
+.main-details {
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    top: 240px;
+}
+
+.info-details .iten-raiting {
+    color: #FFD700;
+}
+
+.info-details .iten-raiting p{
+    color: #666;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.info-details .description-details {
+    font-size: 14px;
+    color: #333;
+    text-align: justify;
+}
+
+.info-details .galery-details {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.info-details .galery-details .galery-image {
+    flex: 1;
+    margin: 5px;
+}
+
+.info-details .galery-details .galery-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.info-details .buy-iten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-details .buy-iten .price-iten {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.info-details .buy-iten .option-detail {
+    background-color: orange;
+    color: white;
+}
