@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger.IO</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--ARQUIVO CSS PARA UTILIZAÇÃO DE ICONES-->
+    <link rel="stylesheet" href="styles.css"> <!--ARQUIVO CSS COM NOSSOS ESTILOS-->
+</head>
+<body>
+
+    <header class="app_bar">
+        <a href="index.html">
+            <i class='bx bx-home-alt'></i>
+        </a>
+        <div class="app_logo">
+            <img src="assets/burgerio_logo.png" alt="Burger.IO Logo Marca">
+        </div>
+        <i class='bx bx-cart'></i>
+    </header><!--app_bar-->
+
+    <main class="home-confirm">
+
+        <h1>Confirme seu Pedido</h1>
+
+        <section class="order-itens">
+
+            <div class="order-card">
+
+                <div class="card-image">
+                    <img id="iten-image" src="assets/double-x.jpg" alt="">
+                </div>
+
+                <div class="card-details">
+                    <h2 id="iten-name">X-Bacon</h2>
+                    <h3 id="iten-price">R$ 12.90</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. 
+                    </p>
+                </div>
+
+            </div>
+            
+            <a href="#" class="button-confirm">
+                <i class='bx bxl-whatsapp'></i> Fazer Pedido
+            </a>
+
+        </section>
+
+    </main>
+    
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const itemName = urlParams.get('name');
+        const itemPrice = urlParams.get('price');
+        const itemImage = urlParams.get('image');
+
+        const elementPrice = document.querySelector('#iten-price');
+        const elementName = document.querySelector('#iten-name');
+        const elementImage = document.querySelector('#iten-image');
+
+        elementPrice.textContent = 'R$ ' + itemPrice;
+        elementName.textContent = itemName;
+        elementImage.src = 'assets/' + itemImage;
+
+    </script>
+    
+</body>
+</html>

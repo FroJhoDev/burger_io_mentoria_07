@@ -11,7 +11,7 @@
 
     <header class="header-details">
 
-        <img src="assets/x-bacon.jpg" alt="X-Bacon">
+        <img src="assets/x-bacon.jpg" alt="X-Bacon" class="image-iten">
 
         <div class="option-details">
 
@@ -39,7 +39,7 @@
 
     <main class="main-details">
 
-        <h1>X-Bacon</h1>
+        <h1 class="name-iten">X-Bacon</h1>
 
         <section class="info-details">
 
@@ -61,12 +61,24 @@
 
             <div class="galery-details">
 
-                <a class="galery-image" href="#">
+                <a class="galery-image" href="#image01">
                     <img src="assets/x-bacon.jpg" alt="X-Bacon">
                 </a>
 
-                <a class="galery-image" href="#">
-                    <img src="assets/x-bacon.jpg" alt="X-Bacon">
+                <a href="#" class="lightbox" id="image01">
+                    <span style="background-image: url(assets/x-bacon.jpg);">
+                        <p>Experimente tambem nosso X-Bacon</p>
+                    </span>
+                </a>
+
+                <a class="galery-image" href="#image02">
+                    <img src="assets/x-salada.jpg" alt="X-Salada">
+                </a>
+
+                <a href="#" class="lightbox" id="image02">
+                    <span style="background-image: url(assets/x-salada.jpg);">
+                        <p>Experimente tambem nosso X-Salada</p>
+                    </span>
                 </a>
 
             </div>
@@ -75,13 +87,34 @@
 
                 <p class="price-iten">R$ 12.90</p>
 
-                <a href="#" class="option-detail">Comprar Item</a>
+                <a onclick="openOrderConfirm();" class="option-detail">Comprar Item</a>
 
             </div>
 
         </section>
 
     </main>
-    
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const itemName = urlParams.get('name');
+        const itemPrice = urlParams.get('price');
+        const itemImage = urlParams.get('image');
+
+        const imageDetail = document.querySelector('.image-iten');
+        const nameDetail = document.querySelector('.name-iten');
+        const priceDetail = document.querySelector('.price-iten');
+
+        nameDetail.textContent = itemName;
+        priceDetail.textContent = 'R$'+ itemPrice;
+        imageDetail.src = 'assets/' + itemImage;
+
+        function openOrderConfirm() {
+            window.open('confirm_order.html?name=' + itemName + '&price=' + itemPrice + '&image=' + itemImage, '_self');
+        }
+        
+    </script>
 </body>
 </html>
