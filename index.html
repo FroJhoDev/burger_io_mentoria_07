@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger.IO</title>
+
+    <!-- PWA Configs -->
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="apple-touch-icon" href="assets/burgerio_logo.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#ff4500" />
+    <meta name="theme-color" content="#ff4500" />
+    <!-- END PWA Configs -->
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--ARQUIVO CSS PARA UTILIZAÇÃO DE ICONES-->
     <link rel="stylesheet" href="styles.css"> <!--ARQUIVO CSS COM NOSSOS ESTILOS-->
 </head>
@@ -22,203 +31,11 @@
         <h1>Itens Disponiveis</h1>
 
         <section class="itens-list">
-
-            <div class="item-card">
-
-                <img class="item-image" src="assets/x-bacon.jpg" alt="X-Burger">
-
-                <div class="card-content">
-
-                    <h2>X-Bacon</h2>
-
-                    <p class="iten-price"><span class="less-price">R$</span> 12.90</p>
-
-                    <div class="iten-raiting">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                    </div>
-
-                    <div class="iten-option">
-                        <a href="item_details.html?name=X-Bacon&price=12.90&image=x-bacon.jpg" 
-                            class="option-detail">Ver Detalhes</a>
-                        <div class="icon-option">
-                            <i class='bx bx-chat' ></i>
-                        </div>
-                        <div class="icon-option">
-                            <i class='bx bx-heart'></i>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div><!--item-card-->
-
-            <div class="item-card">
-
-                <img class="item-image" src="assets/double-x.jpg" alt="X-Burger">
-
-                <div class="card-content">
-
-                    <h2>Double X</h2>
-
-                    <p class="iten-price">R$ 14.90</p>
-
-                    <div class="iten-raiting">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                    </div>
-
-                    <div class="iten-option">
-                        <a href="item_details.html?name=Double X&price=14.90&image=double-x.jpg" class="option-detail">Ver Detalhes</a>
-                        <div class="icon-option">
-                            <i class='bx bx-chat' ></i>
-                        </div>
-                        <div class="icon-option">
-                            <i class='bx bx-heart'></i>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div><!--item-card-->
-
-            <div class="item-card">
-
-                <img class="item-image" src="assets/o-burger-x.jpg" alt="X-Burger">
-
-                <div class="card-content">
-
-                    <h2>O Burger X</h2>
-
-                    <p class="iten-price">R$ 16.90</p>
-
-                    <div class="iten-raiting">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                    </div>
-
-                    <div class="iten-option">
-                        <a href="item_details.html?name=O Burger X&price=16.90&image=o-burger-x.jpg" class="option-detail">Ver Detalhes</a>
-                        <div class="icon-option">
-                            <i class='bx bx-chat' ></i>
-                        </div>
-                        <div class="icon-option">
-                            <i class='bx bx-heart'></i>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div><!--item-card-->
-
-            <div class="item-card">
-
-                <img class="item-image" src="assets/x-burger.jpg" alt="X-Burger">
-
-                <div class="card-content">
-
-                    <h2>X-Burger</h2>
-
-                    <p class="iten-price">R$ 12.90</p>
-
-                    <div class="iten-raiting">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                    </div>
-
-                    <div class="iten-option">
-                        <a href="item_details.html?name=X-Burger&price=12.90&image=x-burger.jpg" class="option-detail">Ver Detalhes</a>
-                        <div class="icon-option">
-                            <i class='bx bx-chat' ></i>
-                        </div>
-                        <div class="icon-option">
-                            <i class='bx bx-heart'></i>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div><!--item-card-->
-
-            <div class="item-card">
-
-                <img class="item-image" src="assets/x-futuro.jpg" alt="X-Burger">
-
-                <div class="card-content">
-
-                    <h2>X-Futuro</h2>
-
-                    <p class="iten-price">R$ 17.50</p>
-
-                    <div class="iten-raiting">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                    </div>
-
-                    <div class="iten-option">
-                        <a href="item_details.html?name=X-Futuro&price=17.50&image=x-futuro.jpg" class="option-detail">Ver Detalhes</a>
-                        <div class="icon-option">
-                            <i class='bx bx-chat' ></i>
-                        </div>
-                        <div class="icon-option">
-                            <i class='bx bx-heart'></i>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div><!--item-card-->
-
-            <div class="item-card">
-
-                <img class="item-image" src="assets/x-salada.jpg" alt="X-Burger">
-
-                <div class="card-content">
-
-                    <h2>X-Salada</h2>
-
-                    <p class="iten-price">R$ 22.99</p>
-
-                    <div class="iten-raiting">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                    </div>
-
-                    <div class="iten-option">
-                        <a href="item_details.html?name=X-Salada&price=22.99&image=x-salada.jpg" class="option-detail">Ver Detalhes</a>
-                        <div class="icon-option">
-                            <i class='bx bx-chat' ></i>
-                        </div>
-                        <div class="icon-option">
-                            <i class='bx bx-heart'></i>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div><!--item-card-->
-
+            <!-- O conteudo daqui vem do JS -->
         </section>
 
     </main>
     
+    <script src="app.js"></script>
 </body>
 </html>

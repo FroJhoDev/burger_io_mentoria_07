@@ -42,7 +42,7 @@
 
             </div>
             
-            <a href="#" class="button-confirm">
+            <a href="#" class="button-confirm" onclick="openWhatsApp()">
                 <i class='bx bxl-whatsapp'></i> Fazer Pedido
             </a>
 
@@ -66,6 +66,10 @@
         elementPrice.textContent = 'R$ ' + itemPrice;
         elementName.textContent = itemName;
         elementImage.src = 'assets/' + itemImage;
+
+        function openWhatsApp() {
+            window.open('https://wa.me/5586981728142?text=Quero+fazer+um+pedido+do+item%3A+ ' + itemName);
+        }
 
     </script>
     
